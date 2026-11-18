@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
+
+.topbar {
+    background-color: #2563eb;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-icon {
+    background-color: white;
+    color: #2563eb;
+    padding: 10px 13px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.brand small {
+    display: block;
+    margin-top: 4px;
+}
+
+.status {
+    font-size: 13px;
+}
+
+.container {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.heading,
+.panel-heading,
+.list-heading,
+.table-footer,
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.subtitle,
+.stat-label,
+.stat-note,
+.footer-note {
+    color: #666;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card,
+.panel {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 26px;
+    margin: 8px 0;
+}
+
+.panel {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.icon-button,
+.secondary {
+    background-color: #777;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.form-grid label {
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    justify-content: flex-end;
+}
+
+.search-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-wrap input {
+    width: 220px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #e5e7eb;
+}
+
+.student-email {
+    color: #666;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.language {
+    background-color: #e8efff;
+    color: #2563eb;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.actions {
+    display: flex;
+    gap: 6px;
+}
+
+.small-btn {
+    padding: 7px 10px;
+}
+
+.delete {
+    background-color: #dc2626;
+}
+
+.delete:hover {
+    background-color: #b91c1c;
+}
+
+.message {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #e8f5e9;
+    color: #216e39;
+}
+
+.message.error {
+    background-color: #fde8e8;
+    color: #b91c1c;
+}
+
+.empty {
+    text-align: center;
+    color: #666;
+    padding: 25px;
+}
+
+.table-footer {
+    margin-top: 15px;
+    color: #666;
+    font-size: 13px;
+}
+
+.text-button {
+    background-color: transparent;
+    color: #2563eb;
+}
+
+.text-button:hover {
+    background-color: #e8efff;
+}
+
+.footer-note {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+@media (max-width: 650px) {
+    .container {
+        width: 92%;
+    }
+
+    .topbar {
+        padding: 15px 4%;
+    }
+
+    .heading,
+    .list-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-wrap,
+    .search-wrap input {
+        width: 100%;
+    }
+}

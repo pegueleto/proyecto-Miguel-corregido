@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de estudiantes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon">E</span><div><strong>EduAdmin</strong><small>Sistema de estudiantes</small></div></div>
+    <span class="status"><span></span> Panel de administración</span>
+  </header>
+
+  <main class="container">
+    <section class="heading">
+      <div><p class="eyebrow">ADMINISTRACIÓN</p><h1>Estudiantes</h1><p class="subtitle">Administra la información de los estudiantes registrados.</p></div>
+      <button class="primary" id="newStudentBtn">＋ Nuevo estudiante</button>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card"><span class="stat-label">Estudiantes registrados</span><strong id="totalStudents">—</strong><span class="stat-note">Total en el sistema</span></article>
+      <article class="stat-card"><span class="stat-label">Idiomas disponibles</span><strong>3</strong><span class="stat-note">Español, inglés y francés</span></article>
+    </section>
+
+    <section class="panel" id="formPanel" hidden>
+      <div class="panel-heading"><div><p class="eyebrow">REGISTRO</p><h2 id="formTitle">Nuevo estudiante</h2></div><button class="icon-button" id="closeFormBtn" aria-label="Cerrar">✕</button></div>
+      <form id="studentForm">
+        <div class="form-grid">
+          <label>Nombre completo<input id="nombre" name="nombre" type="text" maxlength="255" placeholder="Ej. Juan Pérez" required></label>
+          <label>Correo electrónico<input id="correo" name="correo" type="email" placeholder="juan@correo.com" required></label>
+          <label>Teléfono (10 dígitos)<input id="numero_telefono" name="numero_telefono" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="1234567890" required></label>
+          <label>Idioma<select id="idioma" name="idioma" required><option value="">Selecciona un idioma</option><option value="español">Español</option><option value="inglés">Inglés</option><option value="francés">Francés</option></select></label>
+        </div>
+        <div class="form-actions"><button type="button" class="secondary" id="cancelBtn">Cancelar</button><button type="submit" class="primary" id="saveBtn">Guardar estudiante</button></div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="list-heading"><div><p class="eyebrow">DIRECTORIO</p><h2>Lista de estudiantes</h2></div><div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar estudiante..."></div></div>
+      <div id="message" class="message" role="status" hidden></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ID</th><th>Estudiante</th><th>Teléfono</th><th>Idioma</th><th class="actions-col">Acciones</th></tr></thead>
+          <tbody id="studentsTable"><tr><td colspan="5" class="empty">Cargando estudiantes...</td></tr></tbody>
+        </table>
+      </div>
+      <div class="table-footer"><span id="resultsCount">0 estudiantes</span><button class="text-button" id="refreshBtn">↻ Actualizar lista</button></div>
+    </section>
+    <p class="footer-note">Sistema de Gestión de Estudiantes · Proyecto académico</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
